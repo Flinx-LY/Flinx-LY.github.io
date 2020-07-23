@@ -1,0 +1,120 @@
+html {
+    height: 100%;
+    background: #eeeeee url(png/15.jpg) no-repeat fixed;
+    background-size: cover;
+    background-position: 80% 100%;
+}
+body {
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#heading {
+    margin: 3px auto;
+    max-width: 340px;
+    position: relative;
+    height: 60px;
+    border-left: 2px solid green;
+}
+#heading > * {
+    display: inline;
+}
+#in_div {
+    margin: 2% auto;
+    max-width: 340px;
+}
+h4 {
+    display: inline;
+    margin-left: 4%;
+}
+.in {
+    margin: 3% 4%;
+    padding: 2% 3%;
+    width: 70%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
+    outline: none;
+}
+input:focus {
+    border-color: #66ccff;
+    box-shadow: 0px 0px 3px #66ccff;
+}
+.sub {
+    margin: 4% 4%;
+    padding: 2% 3%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cccccc;
+    border-radius: 5px;
+    background-color: white;
+    outline: none;
+}
+#bubble {
+    width: 170px;
+    height: 50px;
+    background-color: #f2ffff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #66ccff;
+    border-radius: 5px;
+    float: right;
+    margin: 10px 20px 0 0;
+}
+#bubble::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #66ccff;
+    margin-left: 170px;
+    margin-top: 15px;
+    position: absolute;
+}
+#bubble:after {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 13px solid transparent;
+    border-left: 13px solid #f2ffff;
+    margin-left: 170px;
+    margin-top: 16px;
+    position: absolute;
+}
+#dialog {
+    width: 170px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    color: #cc00cc;
+}
+table {
+    margin: 0 auto;
+    width: 800px;
+    border-collapse: collapse;
+    text-align: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+td,
+th {
+    padding: 5px 5px;
+    border: 1px solid #bbcccc;
+}
+#tab_div {
+    border: 1px solid green;
+    overflow-x: auto;
+    margin: 2% auto;
+}
+.t1,
+.t2,
+.t4,
+.t5,
+.t8 {
+    white-space: nowrap;
+}
+.ntab {
+    display: none;
+    overflow-x: hidden;
+    margin: 0% 2% 0% 2%;
+}

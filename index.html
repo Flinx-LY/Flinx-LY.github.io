@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta
+            content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+            name="viewport"
+        />
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="inquiry.css" />
+        <script type="text/javascript">
+            function add_test() {
+                alert("测试");
+                add_mul(
+                    "11,12,13,14,15,16,17,18;21,22,23,24,25,26,27,28;31,3211111,331111111111111,201911111,35111111,361111111111111,371111111111111,38111111"
+                );
+            }
+            function finding() {
+                document.getElementById("dialog").innerHTML =
+                    "查询中<br>(⁄ ⁄•⁄ω⁄•⁄ ⁄)";
+            }
+            function add_mul(line_m) {
+                var lines = line_m.split(";");
+                document.getElementById("dialog").innerHTML =
+                    "查询到" + lines.length + "条记录<br>(≧▽≦)";
+                lines.forEach(add_sig);
+            }
+            function add_sig(line) {
+                var tr = document.getElementById("tab").insertRow();
+                var items = line.split(",");
+                for (var i = 0; i < 8; i++) {
+                    var td = tr.insertCell();
+                    td.className = "t" + (i + 1);
+                    td.innerHTML = items[i];
+                }
+            }
+        </script>
+    </head>
+    <body
+        onload="document.getElementsByTagName('html')[0].style.minHeight=window.innerHeight+'px';"
+    >
+        <div id="heading">
+            <img
+                src="png/08.png"
+                style="float: left; width: 50px; margin: 2% 0 0 -21px;"
+            />
+            <h2
+                style="
+                    font-weight: normal;
+                    float: left;
+                    border-bottom: 1px solid #eeeeee;
+                    margin: 10px 0 0 10px;
+                    padding: 6px;
+                "
+            >
+                志愿时长查询
+            </h2>
+            <img
+                src="png/05.png"
+                style="float: right; width: 120px; margin-right: 0px;"
+            />
+        </div>
+
+        <br />
+        <div id="in_div" style="border: 1px solid green;">
+            <form action="">
+                <h4>学号</h4>
+                <br />
+                <input
+                    class="in"
+                    type="text"
+                    name="st_num"
+                    placeholder="学号"
+                />
+                <img
+                    src="png/01.png"
+                    align="right"
+                    style="width: 15%; margin-top: -1%;"
+                />
+                <br />
+                <h4>姓名</h4>
+                <br />
+                <input
+                    class="in"
+                    type="text"
+                    name="st_name"
+                    placeholder="姓名"
+                />
+                <img
+                    src="png/03.png"
+                    align="right"
+                    style="width: 15%; margin-top: -1%;"
+                />
+                <input class="sub" type="submit" value="查询" />
+                <img
+                    src="png/02.png"
+                    align="right"
+                    style="width: 15%; margin: 3% 2% 0% 0%;"
+                    onclick="add_test()"
+                />
+                <div id="bubble">
+                    <div id="dialog">请输入您的学号和姓名<br />(￣▽￣)~*</div>
+                </div>
+            </form>
+        </div>
+        <br />
+        <div id="tab_div">
+            <table id="tab">
+                <col style="" />
+                <col style="" />
+                <col style="max-width: 130px;" />
+                <col style="" />
+                <col style="" />
+                <col style="max-width: 130px;" />
+                <col style="" />
+                <col style="" />
+                <tr>
+                    <td class="t1">ID</td>
+                    <td class="t2">姓名</td>
+                    <td class="t3">学院</td>
+                    <td class="t4">学号</td>
+                    <td class="t5">时长</td>
+                    <td class="t6">组织学院</td>
+                    <td class="t7">任务名称</td>
+                    <td class="t8">组织人</td>
+                </tr>
+                <tr>
+                    <td class="t1">20</td>
+                    <td class="t2">王小明</td>
+                    <td class="t3">电子信息与电气工程学部</td>
+                    <td class="t4">201911111</td>
+                    <td class="t5">2h</td>
+                    <td class="t6">能源与动力学院</td>
+                    <td class="t7">志愿服务志愿服务志愿服务志愿服务志愿服务</td>
+                    <td class="t8">张老师</td>
+                </tr>
+            </table>
+        </div>
+        <div class="ntab">
+            <table>
+                <tr>
+                    <td class="t1" style="border-top: none;">20</td>
+                    <td class="t2">王小明</td>
+                    <td class="t3">电子信息与电气工程学部</td>
+                    <td class="t4">201911111</td>
+                    <td class="t5">2h</td>
+                    <td class="t6">能源与动力学院gggggggggggg</td>
+                    <td class="t7">gggggggggggggggggggggggggg</td>
+                    <td class="t8">张老师</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
